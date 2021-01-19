@@ -14,7 +14,7 @@ declare global {
 class EcommerceGA {
   private readonly provider: BaseProvider | undefined
 
-  constructor(public readonly analyticId: string, public readonly currency: string = 'THB', public readonly _debug: boolean = true) {
+  constructor(public readonly analyticId: string, public readonly currency: string = 'THB', public readonly _debug: boolean = false) {
     if (analyticId.startsWith('UA')) {
       this.provider = new UA(analyticId, currency, _debug)
     } else {
